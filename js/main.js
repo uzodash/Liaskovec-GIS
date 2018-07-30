@@ -529,7 +529,6 @@ function buildLayerTree(layer) {
 function initializeTree() {
     
     let elem = buildLayerTree(map.getLayerGroup());
-    console.log(elem);
     $('#layertree').empty().append(elem);
 
     $('.tree li:has(ul)').addClass('parent_li').find(' > span').attr('title', 'Покажи подслоевете');
@@ -721,8 +720,6 @@ map.on('click', function(evt) {
  */
 function fetchFeaturesWithFETCH(featureRequest){
 
-    console.log(featureRequest);
-
     $('.isLoadingIcon').show();
     $('#resultsPanel').empty();
     $('div#resultsPanel').css('height', '');
@@ -748,6 +745,7 @@ function fetchFeaturesWithFETCH(featureRequest){
         }
         else {
             $('#alertWrapper .alertMessage').text('Възникна проблем, моля опитайте отново!')
+            console.log(error);
             $('#alertWrapper').show();
         }
     });         
@@ -766,9 +764,7 @@ function fetchFeatures(featureRequest){
     $('#resultsPanel').empty();
     $('div#resultsPanel').css('height', '');
 
-    console.log(featureRequest);
     let body = new XMLSerializer().serializeToString(featureRequest);
-    console.log(body);
 
     let httpRequest = new XMLHttpRequest();
     let requestUrl = "http://84.43.190.246:8080/geoserver/wfs";
@@ -793,6 +789,7 @@ function fetchFeatures(featureRequest){
                 }
                 else {
                     $('#alertWrapper .alertMessage').text('Възникна проблем, моля опитайте отново!')
+                    console.log(e);
                     $('#alertWrapper').show();
         }
             }
@@ -839,10 +836,10 @@ function fillFeaturesInList(features){
         
         let feature = features[i];
         let featureKeys = feature.getKeys();
-        //console.log(featureKeys);
         let featureProperties = feature.getProperties();
-        //console.log(featureProperties);
         let featureId = feature.getId();
+
+        let div = '';
 
         //a regular expression for checking the type of the feature
         let regImoti = /KVS_ob_cyr/;
@@ -851,7 +848,7 @@ function fillFeaturesInList(features){
         let shapeArea = featureProperties.Shape_Area.toString().replace(/^(\d+\.\d{1}).*$/, '$1');
         
         if (testImoti == true){
-            let div = "<div class='panel panel-default searchResult'>" + 
+            div = "<div class='panel panel-default searchResult'>" + 
                         "<div class='panel-heading searchResultHeading' role='tab' id='heading"+ i +"'>" + 
                             "<h4 class='panel-title searchResultTitle'>" +
                                 "<a id='"+ featureId +"'role='button' data-toggle='collapse' data-parent='#resultsPanel' href='#collapse"+ i +"' aria-expanded='false'  aria-controls='collapse"+ i +"'>" +
@@ -872,7 +869,7 @@ function fillFeaturesInList(features){
                     "</div>";
         }
         else {
-             let div = "<div class='panel panel-default searchResult'>" + 
+             div = "<div class='panel panel-default searchResult'>" + 
                         "<div class='panel-heading searchResultHeading' role='tab' id='heading"+ i +"'>" + 
                             "<h4 class='panel-title searchResultTitle'>" +
                                 "<a id='"+ featureId +"' role='button' data-toggle='collapse' data-parent='#resultsPanel' href='#collapse"+ i +"' aria-expanded='false'  aria-controls='collapse"+ i +"'>" +
