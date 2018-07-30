@@ -1,48 +1,48 @@
-var format = 'image/png';
-var bounds = [9459234.99609375, 4666044.9296875,
+let format = 'image/png';
+let bounds = [9459234.99609375, 4666044.9296875,
             9481933.644470215, 4681464.00390625];
 
-// var layerOSM = new ol.layer.Tile({
+// let layerOSM = new ol.layer.Tile({
 //     source: new ol.source.OSM(),
 //     name: 'Улична основа',
 //     preload: Infinity,
 //     visible: true
 // });
 
-// var layerBing = new ol.layer.Tile({
+// let layerBing = new ol.layer.Tile({
 //     source: new ol.source.BingMaps({key: 'Atj_O7GzP1FJbECPnyHwExqFTssFbKLbkrpNt6_hqnrGOt-0Hs7EN1cyILkr7Uwt'}),
 //     name: 'Сателитна основа',
 //     preload: Infinity,
 //     visible: false
 // });
 
-// var sourceSgradi = new ol.source.TileWMS(({
-//         url: 'http://84.43.190.242:8080/geoserver/Varna/wms',
-//         params: {'LAYERS': 'Varna:Sgradi','CRS': 'EPSG:3857'},
+// let sourceSgradi = new ol.source.TileWMS(({
+//         url: 'http://84.43.190.242:8080/geoserver/letna/wms',
+//         params: {'LAYERS': 'letna:Sgradi','CRS': 'EPSG:3857'},
 //         serverType: 'geoserver'
 //     }));
 
-// var layerSgradi = new ol.layer.Tile({
+// let layerSgradi = new ol.layer.Tile({
 //     source: sourceSgradi,
 //     name: 'Сгради',
 //     serverName:'Sgradi',
 //     visible: false
 // });
 
-// var sourceImoti = new ol.source.TileWMS(({
-//         url: 'http://84.43.190.242:8080/geoserver/Varna/wms',
-//         params: {'LAYERS': 'Varna:Imoti','CRS': 'EPSG:3857'},
+// let sourceImoti = new ol.source.TileWMS(({
+//         url: 'http://84.43.190.242:8080/geoserver/letna/wms',
+//         params: {'LAYERS': 'letna:Imoti','CRS': 'EPSG:3857'},
 //         serverType: 'geoserver'
 //     }));
 
-// var layerImoti = new ol.layer.Tile({
+// let layerImoti = new ol.layer.Tile({
 //     source: sourceImoti,
 //     name: 'Имоти',
 //     serverName:'Imoti',
 //     visible: false
 // });
 
-var layerStroitelniGranici = new ol.layer.Tile({
+let layerStroitelniGranici = new ol.layer.Tile({
     source: new ol.source.TileWMS(({
         url: 'http://84.43.190.246:8080/geoserver/LyaskovecMay/wms',
         params: {'FORMAT': format, 
@@ -58,7 +58,7 @@ var layerStroitelniGranici = new ol.layer.Tile({
     visible: false
 });
 
-var layerGranica = new ol.layer.Tile({
+let layerGranica = new ol.layer.Tile({
     source: new ol.source.TileWMS(({
         url: 'http://84.43.190.246:8080/geoserver/Liaskovec70/wms',
         params: {'FORMAT': format, 
@@ -73,7 +73,7 @@ var layerGranica = new ol.layer.Tile({
     serverWorkspace:'Liaskovec70',
     visible: false
 });
-var layerKVS = new ol.layer.Tile({
+let layerKVS = new ol.layer.Tile({
     source: new ol.source.TileWMS({
           url: 'http://84.43.190.246:8080/geoserver/Liaskovec70/wms',
           params: {'FORMAT': format, 
@@ -88,7 +88,7 @@ var layerKVS = new ol.layer.Tile({
     serverWorkspace:'Liaskovec70',
     visible: false
 });
-var layerOporenPlan = new ol.layer.Tile({
+let layerOporenPlan = new ol.layer.Tile({
     source: new ol.source.TileWMS({
           url: 'http://84.43.190.246:8080/geoserver/LyaskovecMay/wms',
           params: {'FORMAT': format, 
@@ -102,7 +102,7 @@ var layerOporenPlan = new ol.layer.Tile({
     serverWorkspace:'LyaskovecMay',
     visible: true
 });
-var layerNaseleniMesta = new ol.layer.Tile({
+let layerNaseleniMesta = new ol.layer.Tile({
     source: new ol.source.TileWMS(({
         url: 'http://84.43.190.246:8080/geoserver/Liaskovec70/wms',
         params: {'FORMAT': format, 
@@ -117,7 +117,7 @@ var layerNaseleniMesta = new ol.layer.Tile({
     serverWorkspace:'Liaskovec70',
     visible: false
 });
-var layerNaturalHabitati = new ol.layer.Tile({
+let layerNaturalHabitati = new ol.layer.Tile({
     source: new ol.source.TileWMS(({
         url: 'http://84.43.190.246:8080/geoserver/Liaskovec70/wms',
         params: {'FORMAT': format, 
@@ -132,7 +132,7 @@ var layerNaturalHabitati = new ol.layer.Tile({
     serverWorkspace:'Liaskovec70',
     visible: false
 });
-var layerPUP = new ol.layer.Tile({
+let layerPUP = new ol.layer.Tile({
     source: new ol.source.TileWMS(({
         url: 'http://84.43.190.246:8080/geoserver/LyaskovecMay/wms',
         params: {'FORMAT': format, 
@@ -147,7 +147,7 @@ var layerPUP = new ol.layer.Tile({
     serverWorkspace:'LyaskovecMay',
     visible: false
 });
-var layerTransport = new ol.layer.Tile({
+let layerTransport = new ol.layer.Tile({
     source: new ol.source.TileWMS(({
         url: 'http://84.43.190.246:8080/geoserver/LyaskovecMay/wms',
         params: {'FORMAT': format, 
@@ -162,7 +162,7 @@ var layerTransport = new ol.layer.Tile({
     serverWorkspace:'LyaskovecMay',
     visible: false
 });
-var layerUstroistveniZoni = new ol.layer.Tile({
+let layerUstroistveniZoni = new ol.layer.Tile({
     source: new ol.source.TileWMS(({
         url: 'http://84.43.190.246:8080/geoserver/LyaskovecMay/wms',
         params: {'FORMAT': format, 
@@ -177,7 +177,7 @@ var layerUstroistveniZoni = new ol.layer.Tile({
     serverWorkspace:'LyaskovecMay',
     visible: false
 });
-var layerZashtitenaMestnost = new ol.layer.Tile({
+let layerZashtitenaMestnost = new ol.layer.Tile({
     source: new ol.source.TileWMS(({
         url: 'http://84.43.190.246:8080/geoserver/Liaskovec70/wms',
         params: {'FORMAT': format, 
@@ -192,7 +192,7 @@ var layerZashtitenaMestnost = new ol.layer.Tile({
     serverWorkspace:'Liaskovec70',
     visible: false
 });
-var layerZemlishtniGranici = new ol.layer.Tile({
+let layerZemlishtniGranici = new ol.layer.Tile({
     source: new ol.source.TileWMS(({
         url: 'http://84.43.190.246:8080/geoserver/Liaskovec70/wms',
         params: {'FORMAT': format, 
@@ -208,7 +208,7 @@ var layerZemlishtniGranici = new ol.layer.Tile({
     visible: false
 });
 
-var layerBazoviStancii = new ol.layer.Tile({
+let layerBazoviStancii = new ol.layer.Tile({
     source: new ol.source.TileWMS(({
         url: 'http://84.43.190.246:8080/geoserver/LyaskovecMay/wms',
         params: {'FORMAT': format, 
@@ -224,7 +224,7 @@ var layerBazoviStancii = new ol.layer.Tile({
     visible: false
 });
 
-var layerOptichniKabeli = new ol.layer.Tile({
+let layerOptichniKabeli = new ol.layer.Tile({
     source: new ol.source.TileWMS(({
         url: 'http://84.43.190.246:8080/geoserver/LyaskovecMay/wms',
         params: {'FORMAT': format, 
@@ -240,12 +240,12 @@ var layerOptichniKabeli = new ol.layer.Tile({
     visible: false
 });
 
-var layerGroupTelekom = new ol.layer.Group({
+let layerGroupTelekom = new ol.layer.Group({
     layers: [layerOptichniKabeli,layerBazoviStancii],
     name: 'Телекомуникации'
 });
 
-var layerGazosnabdqvane = new ol.layer.Tile({
+let layerGazosnabdqvane = new ol.layer.Tile({
     source: new ol.source.TileWMS(({
         url: 'http://84.43.190.246:8080/geoserver/LyaskovecMay/wms',
         params: {'FORMAT': format, 
@@ -261,7 +261,7 @@ var layerGazosnabdqvane = new ol.layer.Tile({
     visible: false
 });
 
-var layerKanalizaciq = new ol.layer.Tile({
+let layerKanalizaciq = new ol.layer.Tile({
     source: new ol.source.TileWMS(({
         url: 'http://84.43.190.246:8080/geoserver/LyaskovecMay/wms',
         params: {'FORMAT': format, 
@@ -277,7 +277,7 @@ var layerKanalizaciq = new ol.layer.Tile({
     visible: false
 });
 
-var layerVodoprovod = new ol.layer.Tile({
+let layerVodoprovod = new ol.layer.Tile({
     source: new ol.source.TileWMS(({
         url: 'http://84.43.190.246:8080/geoserver/LyaskovecMay/wms',
         params: {'FORMAT': format, 
@@ -293,12 +293,12 @@ var layerVodoprovod = new ol.layer.Tile({
     visible: false
 });
 
-var layerGroupVIK = new ol.layer.Group({
+let layerGroupVIK = new ol.layer.Group({
     layers: [layerVodoprovod,layerKanalizaciq],
     name: 'ВиК'
 });
 
-var layerElektroporovodi = new ol.layer.Tile({
+let layerElektroporovodi = new ol.layer.Tile({
     source: new ol.source.TileWMS(({
         url: 'http://84.43.190.246:8080/geoserver/LyaskovecMay/wms',
         params: {'FORMAT': format, 
@@ -314,92 +314,12 @@ var layerElektroporovodi = new ol.layer.Tile({
     visible: false
 });
 
-var layerGroupInj = new ol.layer.Group({
+let layerGroupInj = new ol.layer.Group({
     layers: [layerGroupTelekom,layerGazosnabdqvane,layerGroupVIK,layerElektroporovodi],
     name: 'Инженерна инфраструктура'
 });
 
-var layerNKC = new ol.layer.Tile({
-    source: new ol.source.TileWMS(({
-        url: 'http://84.43.190.246:8080/geoserver/Liaskovec70/wms',
-        params: {'FORMAT': format, 
-                'VERSION': '1.1.1',
-                tiled: true,
-                tilesOrigin: 9459234.99609375 + "," + 4666044.9296875,
-                LAYERS: 'Liaskovec70:nkc'},
-        serverType: 'geoserver'
-    })),
-    name: 'НКЦ',
-    serverName:'nkc',
-    serverWorkspace:'Liaskovec70',
-    visible: false
-});
-
-var layerRejimiNkc = new ol.layer.Tile({
-    source: new ol.source.TileWMS(({
-        url: 'http://84.43.190.246:8080/geoserver/Liaskovec70/wms',
-        params: {'FORMAT': format, 
-                'VERSION': '1.1.1',
-                tiled: true,
-                tilesOrigin: 9459234.99609375 + "," + 4666044.9296875,
-                LAYERS: 'Liaskovec70:Rezhimi_nkc'},
-        serverType: 'geoserver'
-    })),
-    name: 'Режими',
-    serverName:'Rezhimi_nkc',
-    serverWorkspace:'Liaskovec70',
-    visible: false
-});
-
-var layerTuristicheskiMarshruti = new ol.layer.Tile({
-    source: new ol.source.TileWMS(({
-        url: 'http://84.43.190.246:8080/geoserver/Liaskovec70/wms',
-        params: {'FORMAT': format, 
-                'VERSION': '1.1.1',
-                tiled: true,
-                tilesOrigin: 9459234.99609375 + "," + 4666044.9296875,
-                LAYERS: 'Liaskovec70:glavni_turisticheski_marshruti'},
-        serverType: 'geoserver'
-    })),
-    name: 'Главни туристически маршрути',
-    serverName:'glavni_turisticheski_marshruti',
-    serverWorkspace:'Liaskovec70',
-    visible: false
-});
-
-var layerTkin = new ol.layer.Tile({
-    source: new ol.source.TileWMS(({
-        url: 'http://84.43.190.246:8080/geoserver/LyaskovecMay/wms',
-        params: {'FORMAT': format, 
-                'VERSION': '1.1.1',
-                tiled: true,
-                tilesOrigin: 9459234.99609375 + "," + 4666044.9296875,
-                LAYERS: 'LyaskovecMay:Tkin'},
-        serverType: 'geoserver'
-    })),
-    name: 'Tкин',
-    serverName:'Tkin',
-    serverWorkspace:'LyaskovecMay',
-    visible: false
-});
-
-var layerAns = new ol.layer.Tile({
-    source: new ol.source.TileWMS(({
-        url: 'http://84.43.190.246:8080/geoserver/LyaskovecMay/wms',
-        params: {'FORMAT': format, 
-                'VERSION': '1.1.1',
-                tiled: true,
-                tilesOrigin: 9459234.99609375 + "," + 4666044.9296875,
-                LAYERS: 'LyaskovecMay:Aktivno_svlachishte'},
-        serverType: 'geoserver'
-    })),
-    name: 'Aктивно неукрепено свлачище',
-    serverName:'Aktivno_svlachishte ',
-    serverWorkspace:'LyaskovecMay',
-    visible: false
-});
-
-var layerNKC = new ol.layer.Tile({
+let layerNKC = new ol.layer.Tile({
     source: new ol.source.TileWMS(({
         url: 'http://84.43.190.246:8080/geoserver/LyaskovecMay/wms',
         params: {'FORMAT': format, 
@@ -415,17 +335,78 @@ var layerNKC = new ol.layer.Tile({
     visible: false
 });
 
+let layerRejimiNkc = new ol.layer.Tile({
+    source: new ol.source.TileWMS(({
+        url: 'http://84.43.190.246:8080/geoserver/Liaskovec70/wms',
+        params: {'FORMAT': format, 
+                'VERSION': '1.1.1',
+                tiled: true,
+                tilesOrigin: 9459234.99609375 + "," + 4666044.9296875,
+                LAYERS: 'Liaskovec70:Rezhimi_nkc'},
+        serverType: 'geoserver'
+    })),
+    name: 'Режими',
+    serverName:'Rezhimi_nkc',
+    serverWorkspace:'Liaskovec70',
+    visible: false
+});
 
-var layerGroupKin = new ol.layer.Group({
+let layerTuristicheskiMarshruti = new ol.layer.Tile({
+    source: new ol.source.TileWMS(({
+        url: 'http://84.43.190.246:8080/geoserver/Liaskovec70/wms',
+        params: {'FORMAT': format, 
+                'VERSION': '1.1.1',
+                tiled: true,
+                tilesOrigin: 9459234.99609375 + "," + 4666044.9296875,
+                LAYERS: 'Liaskovec70:glavni_turisticheski_marshruti'},
+        serverType: 'geoserver'
+    })),
+    name: 'Главни туристически маршрути',
+    serverName:'glavni_turisticheski_marshruti',
+    serverWorkspace:'Liaskovec70',
+    visible: false
+});
+
+let layerTkin = new ol.layer.Tile({
+    source: new ol.source.TileWMS(({
+        url: 'http://84.43.190.246:8080/geoserver/LyaskovecMay/wms',
+        params: {'FORMAT': format, 
+                'VERSION': '1.1.1',
+                tiled: true,
+                tilesOrigin: 9459234.99609375 + "," + 4666044.9296875,
+                LAYERS: 'LyaskovecMay:Tkin'},
+        serverType: 'geoserver'
+    })),
+    name: 'Tкин',
+    serverName:'Tkin',
+    serverWorkspace:'LyaskovecMay',
+    visible: false
+});
+
+let layerAns = new ol.layer.Tile({
+    source: new ol.source.TileWMS(({
+        url: 'http://84.43.190.246:8080/geoserver/LyaskovecMay/wms',
+        params: {'FORMAT': format, 
+                'VERSION': '1.1.1',
+                tiled: true,
+                tilesOrigin: 9459234.99609375 + "," + 4666044.9296875,
+                LAYERS: 'LyaskovecMay:Aktivno_svlachishte'},
+        serverType: 'geoserver'
+    })),
+    name: 'Aктивно неукрепено свлачище',
+    serverName:'Aktivno_svlachishte ',
+    serverWorkspace:'LyaskovecMay',
+    visible: false
+});
+
+let layerGroupKin = new ol.layer.Group({
     layers: [layerTkin,layerTuristicheskiMarshruti,layerNKC,layerRejimiNkc],
     name: 'Културно историческо наследство'
 });
 
-
-
 //vector layer for displaying WFS responses from identification and search
-var vectorSource = new ol.source.Vector();
-var vectorLayer = new ol.layer.Vector({
+let vectorSource = new ol.source.Vector();
+let vectorLayer = new ol.layer.Vector({
     source: vectorSource,
     name: 'theVectorLayer',
     style: new ol.style.Style({
@@ -436,36 +417,36 @@ var vectorLayer = new ol.layer.Vector({
     })
 });
 
-var mousePositionControl = new ol.control.MousePosition({
+let mousePositionControl = new ol.control.MousePosition({
         className: 'custom-mouse-position',
         target: document.getElementById('location'),
         coordinateFormat: ol.coordinate.createStringXY(3),
         undefinedHTML: '&nbsp;'
       });
 
-// var scaleLineControl = new ol.control.ScaleLine({
+// let scaleLineControl = new ol.control.ScaleLine({
 //         className: 'custom-scale-position',
 //         target: document.getElementById('scale'),
 //         undefinedHTML: '&nbsp;'
 //       });
 
 //Main map control and view
-var projection = new ol.proj.Projection({
+let projection = new ol.proj.Projection({
           code: 'EPSG:32635',
           units: 'm',
           axisOrientation: 'neu',
           global: false
       });
 
-var zoomToOriginalExtent = new ol.control.ZoomToExtent({
+let zoomToOriginalExtent = new ol.control.ZoomToExtent({
     label: 'О', tipLabel:'Начална позиция на картата', extent: bounds
 });
 
-var view = new ol.View({
+let view = new ol.View({
     projection: projection
 });
 
-var map = new ol.Map({
+let map = new ol.Map({
     controls: ol.control.defaults({attribution: true}).extend([mousePositionControl, zoomToOriginalExtent]),
     target: 'map',
     layers: [layerOporenPlan,layerAns,layerPUP,layerUstroistveniZoni,layerZashtitenaMestnost,layerNaturalHabitati,layerGroupKin,layerGroupInj,layerKVS,layerZemlishtniGranici,layerNaseleniMesta, layerGranica,layerStroitelniGranici,layerTransport, vectorLayer],
@@ -476,11 +457,11 @@ var map = new ol.Map({
 
 map.getLayerGroup().set('name', 'Слоеве');
 map.getView().on('change:resolution', function(evt) {
-        var resolution = evt.target.get('resolution');
-        var units = map.getView().getProjection().getUnits();
-        var dpi = 25.4 / 0.28;
-        var mpu = ol.proj.METERS_PER_UNIT[units];
-        var scale = resolution * mpu * 39.37 * dpi;
+        let resolution = evt.target.get('resolution');
+        let units = map.getView().getProjection().getUnits();
+        let dpi = 25.4 / 0.28;
+        let mpu = ol.proj.METERS_PER_UNIT[units];
+        let scale = resolution * mpu * 39.37 * dpi;
         scale = Math.round(scale);
         document.getElementById('scale').innerHTML = "1 : " + scale;
       });
@@ -495,9 +476,10 @@ map.getView().on('change:resolution', function(evt) {
 */
 function buildLayerTree(layer) {
 
-    var elem;
-    var name = layer.get('name') ? layer.get('name') : "Group";
-    var visibility = layer.get('visible');
+    let elem;
+    let name = layer.get('name') ? layer.get('name') : "Group";
+    let visibility = layer.get('visible');
+    let div = "";
     
     //a condition to hide the vector layer from the TOC
     if (name == 'theVectorLayer'){
@@ -508,28 +490,28 @@ function buildLayerTree(layer) {
     //get TOC elements
     if (!layer.getLayers) {
         if (visibility !== true ){
-            var div = "<li data-layerid='" + name + "'>" +
+            div = "<li data-layerid='" + name + "'>" +
                 "<span>" + layer.get('name')  +
                 "<i class='glyphicon glyphicon-unchecked'></i> " + "</span>";
         }
         else {
-            var div = "<li data-layerid='" + name + "'>" +
+            div = "<li data-layerid='" + name + "'>" +
                 "<span>" + layer.get('name') + 
                 "<i class='glyphicon glyphicon-check'></i> " + "</span>";
         }
     }
     else{
-        var div = "<li data-layerid='" + name + "'>" +
+        div = "<li data-layerid='" + name + "'>" +
                 "<span>" + layer.get('name') + 
                 "<i class='glyphicon glyphicon-minus'></i> " + "</span>";
     }
     
     if (layer.getLayers) {
-        var sublayersElem = ''; 
-        var layers = layer.getLayers().getArray(),
+        let sublayersElem = ''; 
+        let layers = layer.getLayers().getArray(),
                 len = layers.length;
 
-        for (var i = len - 1; i >= 0; i--) {
+        for (let i = len - 1; i >= 0; i--) {
             sublayersElem += buildLayerTree(layers[i]);
 
         }
@@ -546,13 +528,13 @@ function buildLayerTree(layer) {
  */
 function initializeTree() {
     
-    var elem = buildLayerTree(map.getLayerGroup());
+    let elem = buildLayerTree(map.getLayerGroup());
     console.log(elem);
     $('#layertree').empty().append(elem);
 
     $('.tree li:has(ul)').addClass('parent_li').find(' > span').attr('title', 'Покажи подслоевете');
     $('.tree li.parent_li > span').on('click', function(e) {
-        var children = $(this).parent('li.parent_li').find(' > ul > li');
+        let children = $(this).parent('li.parent_li').find(' > ul > li');
         if (children.is(":visible")) {
             children.hide('fast');
             $(this).attr('title', 'Отвори').find(' > i').fadeIn(400).addClass('glyphicon-plus').removeClass('glyphicon-minus');
@@ -579,9 +561,9 @@ function findBy(layer, key, value) {
 
     // Find recursively if it is a group
     if (layer.getLayers) {
-        var layers = layer.getLayers().getArray(),
+        let layers = layer.getLayers().getArray(),
                 len = layers.length, result;
-        for (var i = 0; i < len; i++) {
+        for (let i = 0; i < len; i++) {
             result = findBy(layers[i], key, value);
             if (result) {
                 return result;
@@ -601,28 +583,29 @@ function findBy(layer, key, value) {
 */
 function buildLegend(layer) {
 
-    var elem;
-    //var name = layer.get('name') ? layer.get('name') : "Group";
-    //var visibility = layer.get('visible');
-    var layerSource = layer.get('serverName');
-    var layerWorkspace = layer.get('serverWorkspace');
-    
-    var legendService = "http://84.43.190.246:8080/geoserver/" + layerWorkspace + "/wms?Service=WMS&REQUEST=GetLegendGraphic&VERSION=1.0.0&FORMAT=image/png&WIDTH=20&HEIGHT=15&LAYER="
+    let elem;
+    //let name = layer.get('name') ? layer.get('name') : "Group";
+    //let visibility = layer.get('visible');
+    let layerSource = layer.get('serverName');
+    let layerWorkspace = layer.get('serverWorkspace');
+    let div = "";
+
+    let legendService = "http://84.43.190.246:8080/geoserver/" + layerWorkspace + "/wms?Service=WMS&REQUEST=GetLegendGraphic&VERSION=1.0.0&FORMAT=image/png&WIDTH=20&HEIGHT=15&LAYER="
     
     if (!layer.getLayers && layerSource != null) {
         
-        var layerName = layer.get('name');
-        var legendSource = legendService + layerSource;
-        var layerVisible = layer.get('visible');
+        let layerName = layer.get('name');
+        let legendSource = legendService + layerSource;
+        let layerVisible = layer.get('visible');
         
         if(layerVisible == false){
-            var div = "<div class='legendItem' legend-layerid='"+ layerName +"'>" +
+            div = "<div class='legendItem' legend-layerid='"+ layerName +"'>" +
                     "<span class='legendItemName'>" + layerName + "</span>" +
                     "<img class='' id='legendItem" + layerSource + "' src= '" + legendSource + "'>" +
                   "</div>";
          }
          else{
-            var div = "<div class='legendItem active' legend-layerid='"+ layerName +"'>" +
+            div = "<div class='legendItem active' legend-layerid='"+ layerName +"'>" +
                 "<span class='legendItemName'>" + layerName + "</span>" +
                 "<img class='' id='legendItem" + layerSource + "' src= '" + legendSource + "'>" +
                 "</div>";
@@ -632,14 +615,14 @@ function buildLegend(layer) {
         //if(layerVisible == false){$("[legend-layerid='"+ layerName +"']").hide();}
     }
     else{
-        var div = "";
+        div = "";
     }
 
     if (layer.getLayers) {
-        var sublayersElem = ''; 
-        var layers = layer.getLayers().getArray(),
+        let sublayersElem = ''; 
+        let layers = layer.getLayers().getArray(),
                 len = layers.length;
-        for (var i = len - 1; i >= 0; i--) {
+        for (let i = len - 1; i >= 0; i--) {
             sublayersElem += buildLegend(layers[i]);
             
         }
@@ -658,7 +641,7 @@ function buildLegend(layer) {
  */
 function initializeLegend() {
     
-    var legendElem = buildLegend(map.getLayerGroup());
+    let legendElem = buildLegend(map.getLayerGroup());
     $('#legendMain').append(legendElem);
 }
 
@@ -674,10 +657,10 @@ function searchForFeatures() {
 
         vectorSource.clear()
 
-        var searchValue = '%' + document.getElementById('searchInput').value + '%';
+        let searchValue = '%' + document.getElementById('searchInput').value + '%';
         
         // generate a GetFeature request
-        var featureRequest = new ol.format.WFS().writeGetFeature({
+        let featureRequest = new ol.format.WFS().writeGetFeature({
             srsName: 'EPSG:32635',
             featureNS: 'Liaskovec70',
             featurePrefix: 'Liaskovec70',
@@ -696,26 +679,26 @@ function searchForFeatures() {
  * info from layer
  * 
  */
-var viewProjection = view.getProjection();
-var viewResolution = view.getResolution();
+let viewProjection = view.getProjection();
+let viewResolution = view.getResolution();
 
 map.on('click', function(evt) {
 
     vectorSource.clear()
 
-    var coords = evt.coordinate;
-    var bbox_area = [coords[0],coords[1],coords[0],coords[1]];
+    let coords = evt.coordinate;
+    let bbox_area = [coords[0],coords[1],coords[0],coords[1]];
     
-    var coordX = coords[0].toString().replace(/^(\d+\.\d{2}).*$/, '$1');
-    var coordY = coords[1].toString().replace(/^(\d+\.\d{2}).*$/, '$1');
+    let coordX = coords[0].toString().replace(/^(\d+\.\d{2}).*$/, '$1');
+    let coordY = coords[1].toString().replace(/^(\d+\.\d{2}).*$/, '$1');
 
-    var coordsForInput = coordX + ', ' + coordY;
+    let coordsForInput = coordX + ', ' + coordY;
     document.getElementById('searchInput').value = coordsForInput;
-    //a variable to hold the features returned from the POST
-    var features;
+    //a letiable to hold the features returned from the POST
+    let features;
 
     // generate a GetFeature request
-    var featureRequest = new ol.format.WFS().writeGetFeature({
+    let featureRequest = new ol.format.WFS().writeGetFeature({
         srsName: 'EPSG:32635',
         featureNS: 'Liaskovec70',
         featurePrefix: 'Liaskovec70',
@@ -750,7 +733,7 @@ function fetchFeaturesWithFETCH(featureRequest){
     }).then(function(response) {
         return response.json();
     }).then(function(json) {
-        var features = new ol.format.GeoJSON().readFeatures(json);
+        let features = new ol.format.GeoJSON().readFeatures(json);
         vectorSource.addFeatures(features);
 
         zoomToExtent(vectorSource.getExtent());
@@ -784,18 +767,18 @@ function fetchFeatures(featureRequest){
     $('div#resultsPanel').css('height', '');
 
     console.log(featureRequest);
-    var body = new XMLSerializer().serializeToString(featureRequest);
+    let body = new XMLSerializer().serializeToString(featureRequest);
     console.log(body);
 
-    var httpRequest = new XMLHttpRequest();
-    var requestUrl = "http://84.43.190.246:8080/geoserver/wfs";
+    let httpRequest = new XMLHttpRequest();
+    let requestUrl = "http://84.43.190.246:8080/geoserver/wfs";
     httpRequest.open("POST", requestUrl, true);
     httpRequest.setRequestHeader("Content-type", "text/plain;charset=UTF-8");
 
     httpRequest.onreadystatechange = function() {//Call a function when the state changes.
         if(httpRequest.readyState == 4 && httpRequest.status == 200) {
             try{
-                var features = new ol.format.GeoJSON().readFeatures(httpRequest.responseText);
+                let features = new ol.format.GeoJSON().readFeatures(httpRequest.responseText);
                 vectorSource.addFeatures(features);
                 zoomToExtent(vectorSource.getExtent());
                 fillFeaturesInList(features);           
@@ -849,26 +832,26 @@ function handleFetchErrors(error){
  */
 function fillFeaturesInList(features){
 
-    //var featuresArray = features.getArray();
-    var len = features.length;
+    //let featuresArray = features.getArray();
+    let len = features.length;
 
-    for (var i = len - 1; i >= 0; i--){
+    for (let i = len - 1; i >= 0; i--){
         
-        var feature = features[i];
-        var featureKeys = feature.getKeys();
+        let feature = features[i];
+        let featureKeys = feature.getKeys();
         //console.log(featureKeys);
-        var featureProperties = feature.getProperties();
+        let featureProperties = feature.getProperties();
         //console.log(featureProperties);
-        var featureId = feature.getId();
+        let featureId = feature.getId();
 
         //a regular expression for checking the type of the feature
-        var regImoti = /KVS_ob_cyr/;
-        var testImoti = regImoti.test(featureId);
+        let regImoti = /KVS_ob_cyr/;
+        let testImoti = regImoti.test(featureId);
 
-        var shapeArea = featureProperties.Shape_Area.toString().replace(/^(\d+\.\d{1}).*$/, '$1');
+        let shapeArea = featureProperties.Shape_Area.toString().replace(/^(\d+\.\d{1}).*$/, '$1');
         
         if (testImoti == true){
-            var div = "<div class='panel panel-default searchResult'>" + 
+            let div = "<div class='panel panel-default searchResult'>" + 
                         "<div class='panel-heading searchResultHeading' role='tab' id='heading"+ i +"'>" + 
                             "<h4 class='panel-title searchResultTitle'>" +
                                 "<a id='"+ featureId +"'role='button' data-toggle='collapse' data-parent='#resultsPanel' href='#collapse"+ i +"' aria-expanded='false'  aria-controls='collapse"+ i +"'>" +
@@ -889,7 +872,7 @@ function fillFeaturesInList(features){
                     "</div>";
         }
         else {
-             var div = "<div class='panel panel-default searchResult'>" + 
+             let div = "<div class='panel panel-default searchResult'>" + 
                         "<div class='panel-heading searchResultHeading' role='tab' id='heading"+ i +"'>" + 
                             "<h4 class='panel-title searchResultTitle'>" +
                                 "<a id='"+ featureId +"' role='button' data-toggle='collapse' data-parent='#resultsPanel' href='#collapse"+ i +"' aria-expanded='false'  aria-controls='collapse"+ i +"'>" +
@@ -912,8 +895,8 @@ function fillFeaturesInList(features){
     $('.isLoadingIcon').hide();
     $('.clearIcon').show();
 
-    var resultsPanelH = $('#resultsPanel').height();
-    var windowH = $(window).height() - 110;
+    let resultsPanelH = $('#resultsPanel').height();
+    let windowH = $(window).height() - 110;
     if (resultsPanelH > windowH){
         //$('#resultsPanel').height($(window).height()-110);  
         $('div#resultsPanel').css('height', $(window).height()-110);
@@ -969,7 +952,7 @@ function zoomToExtent(featureExtent){
 $(document).ready(function() {
 
     $('.mainLeftPanelTabs .mainLeftPanelTabLinks a').on('click', function(e)  {
-        var currentAttrValue = $(this).attr('href');
+        let currentAttrValue = $(this).attr('href');
  
         // Show/Hide Tabs
         $('.mainLeftPanelTabs ' + currentAttrValue).fadeIn(400).siblings().hide();
@@ -995,8 +978,8 @@ $(document).ready(function() {
 
     // Handle visibility control
     $('i').on('click', function() {
-        var layername = $(this).closest('li').data('layerid');
-        var layer = findBy(map.getLayerGroup(), 'name', layername);
+        let layername = $(this).closest('li').data('layerid');
+        let layer = findBy(map.getLayerGroup(), 'name', layername);
         
         if (!layer.getLayers) {
             layer.setVisible(!layer.getVisible());
