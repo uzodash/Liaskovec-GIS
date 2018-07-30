@@ -1,0 +1,93 @@
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:400,300italic,300,400italic,500,500italic,700,700italic);
+
+*{margin:0; padding:0; font-family:Ubuntu;}
+
+html,body{width:100%; height:100%;}
+
+#mapWrapper{width: 100%;height: 100%;}
+#map{width:100%; height:100%;position: relative;}
+
+#leftPanel{position: absolute; left:0; top:0;z-index: 9999;height: 100%;width:320px;background:none;padding: 130px 0 20px 20px; box-sizing: border-box}
+
+#mainHeader{width: 300px;position: absolute;top:20px; left:20px;}
+
+.rakovodstvo{width: 40px;font-size: 20px;position:absolute;left:260px;top:35px; text-decoration: none!important;}
+.rakovodstvo .tooltiptext {visibility: hidden; background-color:#FFF; color: #777;font-size: 12px;width:180px; text-align: center; border-radius: 0;border:1px solid #777; padding: 5px 0;margin:5px; position: absolute; z-index: 1;}
+.rakovodstvo:hover .tooltiptext {visibility: visible;}
+
+#mainLeftPanel{width: 300px;margin:0;height:100%;box-sizing: border-box;}
+.mainLeftPanelTabs{height: 100%;padding: 1px 1px 100px;box-sizing: border-box;}
+.mainLeftPanelTabContents{height: 100%;overflow:auto;}
+
+#contentSadarjanie{margin-left: 20px; height: 100%;}
+#contentSadarjanie #layertree{margin-right: 5px;}
+#contentSadarjanie #layertree span{display: block;padding: 5px 0;} 
+#contentSadarjanie #layertree span:hover{cursor: default;} 
+#contentSadarjanie #layertree span i{float: right;}
+#contentSadarjanie #layertree span i:hover{cursor: pointer;} 
+#contentSadarjanie #layertree .parent_li .parent_li ul{padding-left: 20px;}
+#contentLegenda{height: 100%;}
+
+#legendMain{margin: 10px;}
+#legendMain .legendItem{padding-bottom: 5px;display: none;}
+#legendMain .legendItem.active{display: block;}
+#legendMain .legendItem span{display:block;width: 100%; padding-bottom: 3px;}
+
+
+.panel-footer{height: 63px;width:298px;box-sizing: border-box;position: absolute;left: 20px;bottom: 20px;margin:0 0 1px 1px;}
+.panel-footer #location{float: right;}
+.panel-footer #scale{float: right;}
+.panel-footer #scale .custom-scale-position{border: 1px solid;border-top: none;padding-left: 5px;}
+.navbar-brand{height: 90px;width: 300px;}
+.navbar-brand img{float: left}
+.navbar-brand span{height: 60px; line-height: 60px;padding-left: 20px;float: left;}
+
+.mainLeftPanelTabContents .mainLeftPanelTabContent {
+    display:none;
+}
+ 
+.mainLeftPanelTabContents .mainLeftPanelTabContent.active {
+    display:block;
+}
+
+/*CSS for the OpenLayers map*/
+.ol-zoom { left: 340px;top:20px;}
+.ol-zoom-extent { left: 340px;top:70px;}
+.ol-control button{background-color:#FFF;color:#777;border:1px solid #ddd;}
+.ol-control button:hover{background-color:#e7e7e7;}
+.ol-control button:focus{background-color:#e7e7e7;}
+
+#rightPanel{position: absolute; right:20px; top:20px;z-index: 9999;width:300px;}
+#rightPanel .searchInputBox{width:300px; padding:10px 10px 0 10px;}
+#rightPanel #resultsPanelWrapper{width:280px; overflow: auto;}
+#rightPanel #resultsPanel{width:280px; margin:10px;overflow: auto;}
+
+#rightPanel #resultsPanel .searchResultBody ul{list-style: none;margin: 0}
+/*#rightPanel #resultsPanel .searchResultBody ul li{display: block;width: 100%} 
+#rightPanel #resultsPanel .searchResultBody ul li .key{float: left}
+#rightPanel #resultsPanel .searchResultBody ul li .value{float: right}*/
+#rightPanel #resultsPanel .searchResultBody ul li .key{font-weight: bold;}
+.searchResultIcon{padding-right: 10px;}
+
+.isLoadingIcon{position: absolute;right:85px;top:18px;z-index:9999;display:none;}
+.clearIcon{position: absolute;right:82px;top:20px;z-index:9999;display:none;text-decoration: none!important;}
+.clearIcon:hover{cursor: pointer;} 
+
+#alertWrapper{position: absolute; left: 50%;width:20%;top:20px;display:none;}
+.alert{position: relative; left: -50%; width: 100%;z-index: 9999;}
+
+::-webkit-scrollbar
+{
+  width: 6px;  /* for vertical scrollbars */
+  height: 12px; /* for horizontal scrollbars */
+}
+
+::-webkit-scrollbar-track
+{
+  background: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb
+{
+  background: rgba(0, 0, 0, 0.5);
+}
